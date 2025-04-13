@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 import base64
 import openai
 import argparse
@@ -15,7 +15,7 @@ def encode_image_to_base64(image_path):
 
 def generate_description_from_image(image_path):
     base64_image = encode_image_to_base64(image_path)
-    
+
     print("[INFO] Lähetetään kuva GPT-4 Turbo Vision -mallille...")
 
     response = openai.ChatCompletion.create(
@@ -55,6 +55,26 @@ def generate_image_from_description(prompt):
     print(f"✅ Kuva tallennettu tiedostoon: {filename}")
     return filename
 
+def create_comparison_image(original_path, generated_path):
+    original = Image.open(original_path)
+    generated = Image.open(generated_path)
+
+    # Muutetaan molemmat samankokoisiksi korkeuden mukaan
+    max_height = min(original.height, generated.height)
+    original = ImageOps.contain(original, (original.width, max_height))
+    generated = ImageOps.contain(generated, (generated.width, max_height))
+
+    # Luodaan tyhjä kangas ja liitetään kuvat vierekkäin
+    comparison_width = original.width + generated.width
+    comparison_image = Image.new("RGB", (comparison_width, max_height))
+
+    comparison_image.paste(original, (0, 0))
+    comparison_image.paste(generated, (original.width, 0))
+
+    comparison_path = "vertailu_kuva.png"
+    comparison_image.save(comparison_path)
+    print(f"🖼 Vertailukuva tallennettu tiedostoon: {comparison_path}")
+    comparison_image.show()
 
 def main():
     parser = argparse.ArgumentParser(description="Image-to-Text-to-Image generaattori")
@@ -74,8 +94,8 @@ def main():
     # Generoidaan uusi kuva kuvauksen perusteella
     new_image_path = generate_image_from_description(description)
 
-    # Näytetään generoitu kuva
-    Image.open(new_image_path).show()
+    # Näytetään vertailu
+    create_comparison_image(args.image_path, new_image_path)
 
 if __name__ == "__main__":
     main()

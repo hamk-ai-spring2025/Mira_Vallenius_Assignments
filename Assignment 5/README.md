@@ -1,9 +1,9 @@
 # 🧠 Image-to-Text-to-Image Generator
 
-Tämä projekti on Python-ohjelma, joka lukee kuvan, luo siitä kuvauksen tekoälyn avulla ja generoi sitten uuden kuvan tämän kuvauksen perusteella. Putki toimii seuraavasti:
+Tämä projekti on Python-ohjelma, joka lukee kuvan, luo siitä kuvauksen tekoälyn avulla ja generoi sitten uuden kuvan tämän kuvauksen perusteella. Lopuksi ohjelma luo **vertailukuvan**, jossa alkuperäinen ja tekoälyn luoma kuva näkyvät vierekkäin.
 
-📷 ➜ 📝 ➜ 🎨  
-*Kuva ➜ Tekstikuvaus ➜ Uusi kuva*
+📷 ➜ 📝 ➜ 🎨 ➜ 🖼  
+*Kuva ➜ Tekstikuvaus ➜ Uusi kuva ➜ Vertailu*
 
 ## 🔧 Teknologiat
 
@@ -44,13 +44,14 @@ Ohjelma:
 2. Lähettää sen GPT-4 Turbo -mallille, joka tuottaa tekstikuvauksen.
 3. Syöttää kuvauksen DALL·E 3:lle, joka generoi uuden kuvan.
 4. Tallentaa uuden kuvan `generoitu_kuva_*.png` tiedostoksi.
+5. Luo vertailukuvan `vertailu_kuva.png`, jossa alkuperäinen ja tekoälyn generoima kuva ovat vierekkäin.
 
 ## 🛠 Kehitysideoita
 
 - GUI käyttöliittymä (`tkinter` tai `streamlit`)
 - Valinta kielestä (englanti/suomi)
-- Kuvien vertailunäyttö
-- Kuvan tallennus alkuperäisellä nimellä
+- Kuvien vertailunäyttö kahdessa sarakkeessa HTML-muodossa
+- OpenAI mallin valinta tai lisäparametrit (esim. resoluutio)
 
 ## 📄 Lisenssi
 
