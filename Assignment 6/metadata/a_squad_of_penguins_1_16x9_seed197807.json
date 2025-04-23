@@ -1,0 +1,8 @@
+{
+    "prompt": "A squad of penguins wearing sunglasses and tuxedos, dancing on an iceberg under colorful northern lights, disco ball in the sky, ultra-realistic cinematic style",
+    "negative_prompt": "blurry, distorted, cartoon, messy composition, boring background",
+    "aspect_ratio": "16:9",
+    "width": 1024,
+    "height": 576,
+    "seed": 197807,
+    "image_url": 

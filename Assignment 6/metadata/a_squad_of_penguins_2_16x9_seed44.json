@@ -1,0 +1,11 @@
+{
+    "prompt": "A squad of penguins wearing sunglasses and tuxedos, dancing on an iceberg under colorful northern lights, disco ball in the sky, ultra-realistic cinematic style",
+    "negative_prompt": "blurry, distorted, cartoon, messy composition, boring background",
+    "aspect_ratio": "16:9",
+    "width": 1024,
+    "height": 576,
+    "seed": 44,
+    "image_url": "https://replicate.delivery/xezq/Y1P7fehjFstfapshVQXufQHdK4w5AFO8ONLEtH9vhPZN0ETSB/out-0.png",
+    "saved_filename": "output\\a_squad_of_penguins_2_16x9_seed44.png",
+    "generated_at": "2025-04-21T00:03:16.700380"
+}

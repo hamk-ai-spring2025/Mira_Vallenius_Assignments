@@ -1,0 +1,19 @@
+Test Prompt Configuration
+-------------------------
+
+Prompt:
+A squad of penguins wearing sunglasses and tuxedos, dancing on an iceberg under colorful northern lights, disco ball in the sky, ultra-realistic cinematic style
+
+Negative Prompt:
+blurry, distorted, cartoon, messy composition, boring background
+
+Aspect Ratio:
+16:9
+
+Seed:
+197806
+
+Number of Images:
+2
+
+
