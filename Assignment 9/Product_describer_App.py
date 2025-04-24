@@ -36,7 +36,7 @@ def encode_image(uploaded_file):
 
 # Generation
 if submitted and uploaded_files:
-    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash")
     all_markdown_outputs = []
     all_json_outputs = []
 
