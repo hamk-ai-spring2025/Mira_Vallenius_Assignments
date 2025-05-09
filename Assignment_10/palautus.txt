@@ -1,16 +1,15 @@
 Assignment #10 – Dictionary JSON Generator
-Mira Vallenius
-GitHub repository: https://github.com/hamk-ai-course/your-repo-name-here
 
-For this assignment, I built a simple Python application that asks the user to input a word and then uses the Gemini language model to create a dictionary entry in JSON format. The output includes the word’s definition, synonyms, antonyms, and example sentences—all neatly formatted as pure JSON, just like the assignment asked.
+Mira Vallenius
+
+GitHub repository: https://github.com/hamk-ai-spring2025/Mira_Vallenius_Assignments/tree/main/Assignment_10
+
+I built a simple Python application that asks the user to input a word and then uses the Gemini language model to create a dictionary entry in JSON format. The output includes the word’s definition, synonyms, antonyms, and example sentences formatted as JSON.
 
 The app also detects whether the word is in English or Finnish and generates the entry in the correct language. I made sure the output is always valid JSON by using a regular expression to clean up anything extra, just in case the model adds something unexpected.
 
-To test the model’s full capabilities, I also disabled all content filtering by configuring the safety settings (BLOCK_NONE) for all harm categories. This allowed me to test the application with sensitive or controversial words without the model blocking or altering the results.
+To test the model’s capabilities, I also disabled all content filtering by configuring the safety settings (BLOCK_NONE) for all harm categories. This allowed me to test the application with sensitive or controversial words without the model blocking the results.
 
 The app runs in the command line, and each entry is also saved as a JSON file for later use. I added error handling as well, to make sure it works smoothly even if the model response isn't perfectly clean.
 
-How it went:
-Everything works well! I tested the app with a variety of words—including emotional, abstract, and sensitive ones—and it consistently gives clean, correct JSON. I'm happy with the result and feel like I met the assignment requirements.
-
-You’ll find the code, explanation, and screenshots in the GitHub repo linked above.
+App works well.  I tested the app with a variety of words- including emotional, abstract, and sensitive ones. The app gives clean and correct JSON. I'm happy with the result and feel like I met the assignment requirements.
